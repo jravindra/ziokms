@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Class-Path: servlet-api-2.5.jar cxf-rt-frontend-jaxrs-2.6.1.jar cxf-ap
+ i-2.6.1.jar woodstox-core-asl-4.1.2.jar stax2-api-3.1.1.jar xmlschema
+ -core-2.0.2.jar geronimo-javamail_1.4_spec-1.7.1.jar wsdl4j-1.6.2.jar
+  cxf-rt-core-2.6.1.jar jaxb-impl-2.1.13.jar jsr311-api-1.1.1.jar cxf-
+ rt-bindings-xml-2.6.1.jar cxf-rt-transports-http-2.6.1.jar jackson-co
+ re-asl-1.8.6.jar jackson-mapper-asl-1.8.6.jar jackson-jaxrs-1.8.6.jar
+  spring-web-3.0.5.RELEASE.jar aopalliance-1.0.jar spring-beans-3.0.5.
+ RELEASE.jar spring-core-3.0.5.RELEASE.jar spring-asm-3.0.5.RELEASE.ja
+ r commons-logging-1.1.1.jar spring-context-3.0.5.RELEASE.jar spring-a
+ op-3.0.5.RELEASE.jar spring-expression-3.0.5.RELEASE.jar spring-orm-3
+ .0.5.RELEASE.jar spring-jdbc-3.0.5.RELEASE.jar spring-tx-3.0.5.RELEAS
+ E.jar hibernate-core-3.5.1-Final.jar antlr-2.7.6.jar commons-collecti
+ ons-3.1.jar dom4j-1.6.1.jar xml-apis-1.0.b2.jar jta-1.1.jar slf4j-api
+ -1.5.6.jar hibernate-entitymanager-3.6.0.Final.jar cglib-2.2.jar asm-
+ 3.1.jar javassist-3.12.0.GA.jar hibernate-jpa-2.0-api-1.0.0.Final.jar
+  hibernate-annotations-3.5.6-Final.jar hibernate-commons-annotations-
+ 3.2.0.Final.jar hibernate-validator-4.1.0.Final.jar validation-api-1.
+ 0.0.GA.jar commons-dbcp-1.2.2.jar commons-pool-1.3.jar slf4j-log4j12-
+ 1.5.6.jar log4j-1.2.14.jar commons-lang-2.6.jar cucumber-java-1.0.10.
+ jar cucumber-core-1.0.10.jar gherkin-2.11.0.jar cucumber-html-0.2.1.j
+ ar cucumber-spring-1.0.10.jar cucumber-junit-1.0.10.jar httpclient-4.
+ 2.1.jar httpcore-4.2.1.jar commons-codec-1.6.jar
+

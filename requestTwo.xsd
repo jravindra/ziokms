@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/requestOne/" targetNamespace="http://www.example.org/requestOne/">
+    <complexType name="Dog">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="dog" type="tns:Dog"></element>
+</schema>

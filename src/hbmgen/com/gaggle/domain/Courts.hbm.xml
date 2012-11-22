@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 27, 2012 2:25:14 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.gaggle.domain.Courts" table="COURTS" schema="GAGGLE">
+        <id name="courtId" type="string">
+            <column name="COURT_ID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="club" class="com.gaggle.domain.Club" fetch="select">
+            <column name="CLUB_ID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="courtName" type="string">
+            <column name="COURT_NAME" length="100" />
+        </property>
+        <property name="createdDtm" type="date">
+            <column name="CREATED_DTM" length="7" />
+        </property>
+        <property name="modifiedDtm" type="date">
+            <column name="MODIFIED_DTM" length="7" />
+        </property>
+        <set name="classCourtSchedules" table="CLASS_COURT_SCHEDULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COURT_ID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.gaggle.domain.ClassCourtSchedule" />
+        </set>
+    </class>
+</hibernate-mapping>

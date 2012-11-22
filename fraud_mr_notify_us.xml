@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transaction-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<transaction-id>33333211-clientUs123</transaction-id>
+	<cross-reference />
+	<rules-tripped>5237260000000158441:Member LT 2
+		Days:300;5237260000000165743:AVS Response NO
+		Match:100;5237260000000125321:Order Total GT $50:24</rules-tripped>
+	<total-score>424</total-score>
+	<recommendation-code>1:Hostile Fraud Prevented</recommendation-code>
+	<remarks>AT: 1/10/11 10:53:59 AM CDT
+		BUSINESS PROCESS: 1
+		SCORE: 424
+		USER:
+		user@accertify.com
+		RESOLUTION: Hostile Fraud Prevented
+		NOTES: follows
+		fraud pattern using email ydpx###@yahoo.ie
+
+
+		####################</remarks>
+	<responseData>
+		<transaction>
+			<field name="Action Code">REJECT</field>
+			<transaction-details>
+				<transaction-detail />
+				<transaction-detail />
+				<transaction-detail />
+			</transaction-details>
+		</transaction>
+	</responseData>
+</transaction-results>

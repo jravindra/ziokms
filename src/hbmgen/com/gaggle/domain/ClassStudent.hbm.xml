@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 27, 2012 2:25:14 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.gaggle.domain.ClassStudent" table="CLASS_STUDENT" schema="GAGGLE">
+        <composite-id name="id" class="com.gaggle.domain.ClassStudentId">
+            <key-property name="studentId" type="string">
+                <column name="STUDENT_ID" length="50" />
+            </key-property>
+            <key-property name="classId" type="string">
+                <column name="CLASS_ID" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="badmintonClass" class="com.gaggle.domain.BadmintonClass" update="false" insert="false" fetch="select">
+            <column name="CLASS_ID" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="student" class="com.gaggle.domain.Student" update="false" insert="false" fetch="select">
+            <column name="STUDENT_ID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="createdDtm" type="date">
+            <column name="CREATED_DTM" length="7" />
+        </property>
+        <property name="modifiedDtm" type="date">
+            <column name="MODIFIED_DTM" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="gaggleSessionFactory">
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">gaggle</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@172.29.165.178:1521:xe</property>
+        <property name="hibernate.connection.username">gaggle</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping class="com.gaggle.domain.Student" />
+        <mapping class="com.gaggle.domain.ClassCoach" />
+        <mapping class="com.gaggle.domain.ClassCourtSchedule" />
+        <mapping class="com.gaggle.domain.Club" />
+        <mapping class="com.gaggle.domain.ClassStudent" />
+        <mapping class="com.gaggle.domain.Coach" />
+        <mapping class="com.gaggle.domain.Courts" />
+        <mapping class="com.gaggle.domain.BadmintonClass" />
+        <mapping class="com.gaggle.domain.ClubStudent" />
+    </session-factory>
+</hibernate-configuration>

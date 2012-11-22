@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 27, 2012 2:25:14 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.gaggle.domain.Club" table="CLUB" schema="GAGGLE">
+        <id name="clubId" type="string">
+            <column name="CLUB_ID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" not-null="true" />
+        </property>
+        <property name="address1" type="string">
+            <column name="ADDRESS1" length="150" not-null="true" />
+        </property>
+        <property name="address2" type="string">
+            <column name="ADDRESS2" length="150" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="25" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="2" not-null="true" />
+        </property>
+        <property name="zip" type="string">
+            <column name="ZIP" length="5" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="12" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="12" />
+        </property>
+        <property name="createdDtm" type="date">
+            <column name="CREATED_DTM" length="7" />
+        </property>
+        <property name="modifiedDtm" type="date">
+            <column name="MODIFIED_DTM" length="7" />
+        </property>
+        <set name="clubStudents" table="CLUB_STUDENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLUB_ID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.gaggle.domain.ClubStudent" />
+        </set>
+        <set name="courtses" table="COURTS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLUB_ID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.gaggle.domain.Courts" />
+        </set>
+    </class>
+</hibernate-mapping>
